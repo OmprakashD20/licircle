@@ -7,8 +7,10 @@ const MobileNavLink = ({ link }) => {
   const { currentPath } = useContext(AppContext);
   const { name, href } = link;
   const isActive = currentPath === href;
-  const textColor = isActive ? "text-secondary2" : "text-white/80";
-  const underline = isActive ? "underline underline-offset-2 decoration-secondary2" : "";
+  const textColor = isActive ? "text-secondary2" : "text-black/80";
+  const underline = isActive
+    ? "underline underline-offset-2 decoration-secondary2"
+    : "";
 
   const navLinkVariants = {
     initial: {
@@ -27,7 +29,10 @@ const MobileNavLink = ({ link }) => {
     },
   };
   return (
-    <motion.div variants={navLinkVariants} className="text-2xl uppercase">
+    <motion.div
+      variants={navLinkVariants}
+      className="text-xl min-[550px]:text-[22px] uppercase"
+    >
       <Link href={href} className={`${textColor} ${underline}`}>
         {name}
       </Link>
@@ -39,13 +44,13 @@ const NavLink = ({ link }) => {
   const { currentPath } = useContext(AppContext);
   const { name, href } = link;
   const isActive = currentPath === href;
-  const textColor = isActive ? "text-primary" : "text-black/80";
+  const textColor = isActive ? "text-secondary2" : "text-black/80";
   const fontWeight = isActive ? "font-semibold" : "font-normal";
   const underlineColor = isActive ? "bg-primary" : "bg-black/80";
   return (
     <div>
       <Link
-        className={`text-lg uppercase tracking-widest relative group ${textColor} ${fontWeight}`}
+        className={`min-[900px]:text-lg uppercase tracking-widest relative group ${textColor} ${fontWeight}`}
         href={href}
       >
         {name}
