@@ -11,6 +11,15 @@ export default {
         tertiary1: "#f5ffd3",
         tertiary2: "#d6d5",
       },
+      fontFamily: {
+        oxygen: ["Oxygen", "sans-serif"],
+        bebasNeue: ["Bebas Neue", "sans-serif"],
+        quando: ["Quando", "serif"],
+        roboto: ["Roboto", "sans-serif"],
+      },
+      screens: {
+        xs: "480px",
+      },
     },
   },
   plugins: [],

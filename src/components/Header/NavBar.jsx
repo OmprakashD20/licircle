@@ -96,17 +96,17 @@ const NavBar = () => {
         type: "spring",
         duration: 0.5,
       }}
-      className={`h-14 md:h-10 ${
+      className={`z-10 h-14 md:h-10 ${
         isScrolled ? "bg-tertiary1 shadow-sm rounded-b-[25px]" : ""
-      } md:h-0 flex justify-between items-center px-4 md:p-8 w-full`}
+      } flex justify-between items-center px-4 sm:px-16 md:py-8 md:px-20 w-full`}
     >
-      <img className="h-5 md:h-7 my-2" src={logo} alt="LiCircle" />
-      <div className="hidden my-2 md:flex gap-6 items-center justify-between">
+      <img className="h-5 sm:h-6 md:h-7 my-2" src={logo} alt="LiCircle" />
+      <div className="hidden my-2 xs:flex gap-6 items-center justify-between">
         {navLinks.map((link, index) => {
           return <NavLink key={index} link={link} />;
         })}
       </div>
-      <p className="md:hidden cursor-pointer text-md text-primary flex pt-1 items-center">
+      <p className="xs:hidden cursor-pointer text-md text-primary flex pt-1 items-center">
         <IoMdMenu onClick={toggleMenu} size={26} />
       </p>
       <AnimatePresence>
@@ -116,11 +116,11 @@ const NavBar = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="md:hidden fixed left-0 top-0 w-full h-screen origin-top bg-tertiary1 pt-4 px-4"
+            className="z-10 xs:hidden fixed left-0 top-0 w-full h-screen origin-top bg-tertiary1 pt-4 px-4"
           >
             <div className="flex h-full flex-col">
               <div className="flex justify-between">
-                <img className="h-5" src={logo} alt="LiCircle" />
+                <img className="h-5 sm:h-6" src={logo} alt="LiCircle" />
                 <p className="cursor-pointer text-md text-primary flex place-items-center">
                   <IoMdClose onClick={toggleMenu} size={26} />
                 </p>
@@ -160,7 +160,7 @@ const NavBar = () => {
                   animate="open"
                   exit="exit"
                 >
-                  <p className="text-secondary2 font-medium text-sm underline underline-offset-2">
+                  <p className="text-secondary2 font-bold text-base underline underline-offset-2 hover:scale-105 transition-transform cursor-pointer font-oxygen">
                     info@licircle.org.in
                   </p>
                 </motion.div>
