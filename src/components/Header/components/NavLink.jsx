@@ -31,7 +31,7 @@ const MobileNavLink = ({ link }) => {
   return (
     <motion.div
       variants={navLinkVariants}
-      className="text-xl min-[550px]:text-[22px] uppercase"
+      className="cursor-pointer text-xl uppercase font-quando"
     >
       <Link href={href} className={`${textColor} ${underline}`}>
         {name}
@@ -50,7 +50,7 @@ const NavLink = ({ link }) => {
   return (
     <div>
       <Link
-        className={`min-[900px]:text-lg uppercase tracking-widest relative group ${textColor} ${fontWeight}`}
+        className={`cursor-pointer xs:text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] relative group ${textColor} ${fontWeight} font-quando`}
         href={href}
       >
         {name}

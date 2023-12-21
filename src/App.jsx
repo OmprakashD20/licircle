@@ -2,15 +2,15 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home/Home";
-import About from "./pages/About/About";
-import Contact from "./pages/Contact/Contact";
-import Product from "./pages/Product/Product";
-import Technology from "./pages/Technology/Technology";
+import About from "./pages/Home/components/About";
+import Contact from "./pages/Home/components/Contact";
+import Product from "./pages/Home/components/Product";
+import Technology from "./pages/Home/components/Technology";
 import Error from "./pages/Error/Error";
 
 const App = () => {
   return (
-    <div>
+    <div className="">
       <Routes>
         {/* Home Page */}
         <Route path="/" element={<Home />} />
