@@ -1,4 +1,5 @@
 import logo from "@/assets/logo.webp";
+import logoAlt from "@/assets/logo-white.png";
 import hero from "@/assets/hero.png";
 
 const navLinks = [
@@ -24,4 +25,4 @@ const navLinks = [
   },
 ];
 
-export { logo, hero, navLinks };
+export { logo, hero, logoAlt, navLinks };

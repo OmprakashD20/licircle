@@ -4,14 +4,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#fefefe",
-        primary: "#9fc131",
-        secondary1: "#dbf227",
+        background: "#ebf0f2",
+        primary: "#225926",
+        secondary1: "#1e4020",
         secondary2: "#042940",
-        tertiary1: "#f5ffd3",
-        tertiary2: "#d6d5",
+        tertiary1: "#64a646",
+        tertiary2: "#90bf6f",
       },
       fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
         oxygen: ["Oxygen", "sans-serif"],
         bebasNeue: ["Bebas Neue", "sans-serif"],
         quando: ["Quando", "serif"],

@@ -7,7 +7,7 @@ const MobileNavLink = ({ link }) => {
   const { currentPath } = useContext(AppContext);
   const { name, href } = link;
   const isActive = currentPath === href;
-  const textColor = isActive ? "text-secondary2" : "text-black/80";
+  const textColor = isActive ? "text-secondary2 font-medium" : "text-white";
   const underline = isActive
     ? "underline underline-offset-2 decoration-secondary2"
     : "";
@@ -31,27 +31,29 @@ const MobileNavLink = ({ link }) => {
   return (
     <motion.div
       variants={navLinkVariants}
-      className="cursor-pointer text-xl uppercase font-quando"
+      className="cursor-pointer text-2xl uppercase font-montserrat"
     >
-      <Link href={href} className={`${textColor} ${underline}`}>
+      <Link to="/" className={`${textColor} ${underline}`}>
         {name}
       </Link>
     </motion.div>
   );
 };
 
-const NavLink = ({ link }) => {
+const NavLink = ({ link, isScrolled }) => {
   const { currentPath } = useContext(AppContext);
   const { name, href } = link;
   const isActive = currentPath === href;
-  const textColor = isActive ? "text-secondary2" : "text-black/80";
-  const fontWeight = isActive ? "font-semibold" : "font-normal";
+  const textColor = isActive
+    ? `${isScrolled ? "text-primary" : "text-secondary2"}`
+    : "text-black";
+  const fontWeight = isActive ? "font-bold" : "font-medium";
   const underlineColor = isActive ? "bg-primary" : "bg-black/80";
   return (
     <div>
       <Link
-        className={`cursor-pointer xs:text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] relative group ${textColor} ${fontWeight} font-quando`}
-        href={href}
+        className={`cursor-pointer text-[16px] relative group ${textColor} ${fontWeight} font-montserrat`}
+        to="/"
       >
         {name}
         <div

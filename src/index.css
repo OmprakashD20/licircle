@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oxygen:wght@300;400;700&family=Quando&family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --primary: #9fc131;
-  --secondary: #f5ffd3;
+  --primary: #225926;
+  --secondary: #ebf0f2;
+  --selection-color: #aad48c;
 }
 
 /* Firefox */
@@ -31,9 +34,9 @@
 }
 
 ::selection {
-  background: #f5ffd3;
+  background: var(--selection-color);
 }
 
 body {
-  background-color: #f4f4f4;
+  background-color: var(--secondary);
 }
