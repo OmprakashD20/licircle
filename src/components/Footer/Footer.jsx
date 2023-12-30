@@ -18,7 +18,11 @@ const Footer = () => {
         className="sm:group-hover:scale-125 transition-all"
       />
     </a>,
-    <a href="" target="_blank" aria-label="Find more about us on LinkedIn">
+    <a
+      href="https://www.linkedin.com/company/licircle/"
+      target="_blank"
+      aria-label="Find more about us on LinkedIn"
+    >
       <FaLinkedin
         size={socialIconSize}
         className="text-sky-600 sm:group-hover:scale-125 transition-all"
@@ -41,7 +45,7 @@ const Footer = () => {
           <div className="flex items-center justify-between mt-2 xs:my-4">
             {socialIcons.map((icon, index) => (
               <div
-                className="w-8 xs:w-10 sm:w-12 h-8 xs:h-10 sm:h-12 mr-4 cursor-pointer rounded-full border-2 flex justify-center items-center sm:hover:border-primary sm:hover:bg-tertiary1 transition-all duration-200 group"
+                className="w-8 xs:w-10 sm:w-12 h-8 xs:h-10 sm:h-12 mr-4 cursor-pointer rounded-full border-2 flex justify-center items-center sm:hover:border-primary transition-all duration-200 group"
                 key={index}
               >
                 {icon}
@@ -73,33 +77,33 @@ const Footer = () => {
           <h2 className="text-2xl font-bebasNeue text-primary">Contact</h2>
           <div className="flex flex-col flex-1 items-start text-sm xs:text-base font-oxygen xs:my-2">
             <div className="flex items-center my-1">
-              <div className="w-8 xs:w-10 sm:w-12 h-8 xs:h-10 sm:h-12 cursor-pointer rounded-full border-2 flex justify-center items-center mr-2 hover:border-primary hover:bg-tertiary1 transition-all duration-200 group">
+              <div className="w-8 xs:w-10 sm:w-12 h-8 xs:h-10 sm:h-12 cursor-pointer rounded-full border-2 flex justify-center items-center mr-2 sm:hover:border-primary transition-all duration-200 group">
                 <IoMail
                   size={socialIconSize}
-                  className="text-sky-600 group-hover:scale-125 transition-all"
+                  className="text-sky-600 sm:group-hover:scale-125 transition-all"
                 />
               </div>
               <a
-                className="md:relative group"
+                className="sm:relative group"
                 href="mailto:santosh@licircle.com"
               >
                 santosh@licircle.com
                 <div
-                  className={`absolute w-full h-[0.5px] bg-secondary2 scale-x-0 md:group-hover:scale-x-100 transition-transform duration-200`}
+                  className={`absolute w-full h-[0.5px] bg-secondary2 scale-x-0 sm:group-hover:scale-x-100 transition-transform duration-200`}
                 ></div>
               </a>
             </div>
             <div className="flex items-center">
-              <div className="w-8 xs:w-10 sm:w-12 h-8 xs:h-10 sm:h-12 cursor-pointer rounded-full border-2 flex justify-center items-center mr-2 hover:border-primary hover:bg-tertiary1 transition-all duration-200 group">
+              <div className="w-8 xs:w-10 sm:w-12 h-8 xs:h-10 sm:h-12 cursor-pointer rounded-full border-2 flex justify-center items-center mr-2 sm:hover:border-primary transition-all duration-200 group">
                 <IoCall
                   size={socialIconSize}
-                  className="text-green-600 group-hover:scale-125 transition-all"
+                  className="text-green-600 sm:group-hover:scale-125 transition-all"
                 />
               </div>
-              <a className="md:relative group" href="tel:+91 97310 67677">
+              <a className="sm:relative group" href="tel:+91 97310 67677">
                 +91 97310 67677
                 <div
-                  className={`absolute w-full h-[0.5px] bg-secondary2 scale-x-0 md:group-hover:scale-x-100 transition-transform duration-200`}
+                  className={`absolute w-full h-[0.5px] bg-secondary2 scale-x-0 sm:group-hover:scale-x-100 transition-transform duration-200`}
                 ></div>
               </a>
             </div>

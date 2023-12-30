@@ -3,7 +3,7 @@ import { IoMdMenu, IoMdClose } from "react-icons/io";
 import { motion, AnimatePresence } from "framer-motion";
 import { MobileNavLink, NavLink } from "./components/NavLink";
 
-import { logo, navLinks } from "@/constants/constants";
+import { logo, logoAlt, navLinks } from "@/constants/constants";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,6 +28,13 @@ const NavBar = () => {
   };
 
   const toggleMenu = () => {
+    if (isMenuOpen) {
+      setTimeout(() => {
+        document.getElementsByTagName("body")[0].style.overflow = "auto";
+      }, 500);
+    } else {
+      document.getElementsByTagName("body")[0].style.overflow = "hidden";
+    }
     setIsMenuOpen(!isMenuOpen);
   };
 
@@ -97,16 +104,16 @@ const NavBar = () => {
         duration: 0.5,
       }}
       className={`z-10 h-14 md:h-10 ${
-        isScrolled ? "bg-tertiary1 shadow-sm rounded-b-[25px]" : ""
-      } flex justify-between items-center px-4 sm:px-16 md:py-8 md:px-20 w-full`}
+        isScrolled ? "backdrop-blur-sm" : ""
+      } flex justify-between items-center px-4 xs:px-8 md:py-8 md:px-20 w-full`}
     >
       <img className="h-5 sm:h-6 md:h-7 my-2" src={logo} alt="LiCircle" />
-      <div className="hidden my-2 xs:flex gap-6 items-center justify-between">
+      <div className="hidden my-2 md:flex gap-6 items-center justify-between">
         {navLinks.map((link, index) => {
-          return <NavLink key={index} link={link} />;
+          return <NavLink key={index} link={link} isScrolled={isScrolled} />;
         })}
       </div>
-      <p className="xs:hidden cursor-pointer text-md text-primary flex pt-1 items-center">
+      <p className="md:hidden cursor-pointer text-md text-primary flex pt-1 items-center">
         <IoMdMenu onClick={toggleMenu} size={26} />
       </p>
       <AnimatePresence>
@@ -116,12 +123,12 @@ const NavBar = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="z-10 xs:hidden fixed left-0 top-0 w-full h-screen origin-top bg-tertiary1 pt-4 px-4"
+            className="z-10 md:hidden fixed left-0 top-0 w-full h-screen origin-top bg-tertiary1 pt-4 px-4"
           >
             <div className="flex h-full flex-col">
               <div className="flex justify-between">
-                <img className="h-5 sm:h-6" src={logo} alt="LiCircle" />
-                <p className="cursor-pointer text-md text-primary flex place-items-center">
+                <img className="h-5 sm:h-6" src={logoAlt} alt="LiCircle" />
+                <p className="cursor-pointer text-md text-background flex place-items-center">
                   <IoMdClose onClick={toggleMenu} size={26} />
                 </p>
               </div>
@@ -160,7 +167,7 @@ const NavBar = () => {
                   animate="open"
                   exit="exit"
                 >
-                  <p className="text-secondary2 font-bold text-base underline underline-offset-2 hover:scale-105 transition-transform cursor-pointer font-oxygen">
+                  <p className="text-white font-medium text-base underline underline-offset-2 hover:scale-105 transition-transform cursor-pointer font-oxygen">
                     info@licircle.org.in
                   </p>
                 </motion.div>
