@@ -13,7 +13,7 @@ const Process = () => {
   return (
     <>
       <NavBar />
-      <section class="items-center pt-12 font-poppins">
+      <section class="items-center pt-4 font-poppins">
         <div class="justify-center max-w-6xl px-4 pt-4 mx-auto lg:py-8 md:px-6">
           <div class="max-w-xl mx-auto">
             <div class="text-center">
