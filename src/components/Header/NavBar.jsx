@@ -104,13 +104,13 @@ const NavBar = () => {
         duration: 0.5,
       }}
       className={`z-10 h-14 md:h-10 ${
-        isScrolled ? "backdrop-blur-sm" : ""
-      } flex justify-between items-center px-4 xs:px-8 md:py-8 md:px-20 w-full`}
+        isScrolled ? "shadow-lg rounded-b-[20px]" : ""
+      } bg-background flex justify-between items-center px-4 xs:px-8 md:py-8 md:px-20 w-full`}
     >
       <img className="h-5 sm:h-6 md:h-7 my-2" src={logo} alt="LiCircle" />
       <div className="hidden my-2 md:flex gap-6 items-center justify-between">
         {navLinks.map((link, index) => {
-          return <NavLink key={index} link={link} isScrolled={isScrolled} />;
+          return <NavLink key={index} link={link} />;
         })}
       </div>
       <p className="md:hidden cursor-pointer text-md text-primary flex pt-1 items-center">
