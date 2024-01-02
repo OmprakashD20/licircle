@@ -33,7 +33,7 @@ const MobileNavLink = ({ link }) => {
       variants={navLinkVariants}
       className="cursor-pointer text-2xl uppercase font-quando"
     >
-      <Link to="/" className={`${textColor} ${underline}`}>
+      <Link to={href} className={`${textColor} ${underline}`}>
         {name}
       </Link>
     </motion.div>
