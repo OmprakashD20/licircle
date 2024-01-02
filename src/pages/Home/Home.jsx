@@ -1,5 +1,8 @@
 import NavBar from "@/components/Header/NavBar";
 import Footer from "@/components/Footer/Footer";
+import Cards from "@/components/Shared/Cards";
+
+import { WhyUs } from "@/constants/constants";
 
 import Hero from "./components/Hero";
 import Vision from "./components/Vision";
@@ -12,6 +15,7 @@ const Home = () => {
       <Hero />
       <Vision />
       <Awards />
+      <Cards features={WhyUs} title={"Why"} mainTitle={"LiCircle"} />
       <Footer />
     </>
   );

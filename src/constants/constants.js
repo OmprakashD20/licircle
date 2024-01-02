@@ -1,12 +1,15 @@
+//Logo Images
 import logo from "@/assets/logo.webp";
 import logoAlt from "@/assets/logo-white.webp";
 
+//Support Images
 import support1 from "@/assets/Support/support1.png";
 import support2 from "@/assets/Support/support2.png";
 import support3 from "@/assets/Support/support3.png";
 import support4 from "@/assets/Support/support4.png";
 import support5 from "@/assets/Support/support5.png";
 
+//Goal Images
 import goal1 from "@/assets/Goals/goal1.svg";
 import goal2 from "@/assets/Goals/goal2.svg";
 import goal3 from "@/assets/Goals/goal3.svg";
@@ -17,14 +20,22 @@ import goal7 from "@/assets/Goals/goal7.svg";
 import goal8 from "@/assets/Goals/goal8.svg";
 import goal9 from "@/assets/Goals/goal9.svg";
 
+//Process Images
+import process1 from "@/assets/Process/stage1.png";
+import process2 from "@/assets/Process/stage2.png";
+import process3 from "@/assets/Process/stage3.png";
+import process4 from "@/assets/Process/stage4.png";
+import process5 from "@/assets/Process/stage5.png";
+
+//Nav Links
 export const navLinks = [
   {
     name: "Home",
     href: "/",
   },
   {
-    name: "Product",
-    href: "/product",
+    name: "Process",
+    href: "/process",
   },
   {
     name: "Technology",
@@ -40,7 +51,16 @@ export const navLinks = [
   },
 ];
 
-export const OurTechnology = [
+//Technology 1
+export const MechanicalProcessing = [
+  {
+    name: "4 Tons per day unit-existing",
+    description: "loreum ipsum dolor sit amet loreum ipsum dolor sit amet",
+  },
+];
+
+//Technology 2
+export const Repurposing = [
   {
     name: "Swift Battery Testing",
     description:
@@ -57,6 +77,35 @@ export const OurTechnology = [
   },
 ];
 
+//Technology 3
+export const Recovery = [
+  {
+    name: "Sustainable Recovery Technology-Slurry Electrolysis",
+    description: "loreum ipsum dolor sit amet loreum ipsum dolor sit amet",
+  },
+
+  {
+    name: "Economical",
+    description: "loreum ipsum dolor sit amet loreum ipsum dolor sit amet",
+  },
+
+  {
+    name: "No Chemicals, Non-Hazardous",
+    description: "loreum ipsum dolor sit amet loreum ipsum dolor sit amet",
+  },
+
+  {
+    name: "Lesser carbon emission",
+    description: "loreum ipsum dolor sit amet loreum ipsum dolor sit amet",
+  },
+
+  {
+    name: "High Purity ",
+    description: "loreum ipsum dolor sit amet loreum ipsum dolor sit amet",
+  },
+];
+
+//Why Us
 export const WhyUs = [
   {
     name: "Sustainability",
@@ -97,4 +146,9 @@ export {
   goal7,
   goal8,
   goal9,
+  process1,
+  process2,
+  process3,
+  process4,
+  process5,
 };

@@ -1,5 +1,4 @@
-import { useMediaQuery } from "react-responsive";
-import AnimatedButton from "@/components/Button/Button";
+import AnimatedButton from "@/components/Shared/Button";
 
 import {
   goal1,
@@ -14,13 +13,8 @@ import {
 } from "@/constants/constants";
 
 const Hero = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   return (
-    <div
-      className={`relative overflow-hidden mb-12 pt-4 ${
-        isMobile ? "-z-20" : ""
-      }`}
-    >
+    <div className="relative overflow-hidden mb-12 pt-4">
       <div className="pb-80 pt-8 xs:pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-36">
         <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
           <div className="sm:max-w-lg">
@@ -118,7 +112,7 @@ const Hero = () => {
                   </div>
                 </div>
               </div>
-              {isMobile ? null : <AnimatedButton title={"Learn more"} />}
+              <AnimatedButton title={"Learn more"} href={"/technology"} />
             </div>
           </div>
         </div>
