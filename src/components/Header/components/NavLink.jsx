@@ -31,7 +31,7 @@ const MobileNavLink = ({ link }) => {
   return (
     <motion.div
       variants={navLinkVariants}
-      className="cursor-pointer text-2xl uppercase font-montserrat"
+      className="cursor-pointer text-2xl uppercase font-quando"
     >
       <Link to="/" className={`${textColor} ${underline}`}>
         {name}
@@ -40,20 +40,18 @@ const MobileNavLink = ({ link }) => {
   );
 };
 
-const NavLink = ({ link, isScrolled }) => {
+const NavLink = ({ link }) => {
   const { currentPath } = useContext(AppContext);
   const { name, href } = link;
   const isActive = currentPath === href;
-  const textColor = isActive
-    ? `${isScrolled ? "text-primary" : "text-secondary2"}`
-    : "text-black";
+  const textColor = isActive ? "text-primary" : "text-black";
   const fontWeight = isActive ? "font-bold" : "font-medium";
   const underlineColor = isActive ? "bg-primary" : "bg-black/80";
   return (
     <div>
       <Link
-        className={`cursor-pointer text-[16px] relative group ${textColor} ${fontWeight} font-montserrat`}
-        to="/"
+        className={`cursor-pointer text-[16px] relative group ${textColor} ${fontWeight} font-quando`}
+        to={href}
       >
         {name}
         <div
