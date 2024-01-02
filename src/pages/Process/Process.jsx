@@ -13,8 +13,8 @@ const Process = () => {
   return (
     <>
       <NavBar />
-      <section class="items-center py-12 font-poppins dark:bg-gray-800">
-        <div class="justify-center max-w-6xl px-4 py-4 mx-auto lg:py-8 md:px-6">
+      <section class="items-center pt-12 font-poppins">
+        <div class="justify-center max-w-6xl px-4 pt-4 mx-auto lg:py-8 md:px-6">
           <div class="max-w-xl mx-auto">
             <div class="text-center">
               <div class="relative flex flex-col items-center">
@@ -38,7 +38,7 @@ const Process = () => {
                 <h2 class="inline-block px-4 py-2 mb-4 text-xs font-medium text-gray-100 bg-gradient-to-r from-tertiary2 to-tertiary1 rounded-3xl">
                   Stage 1
                 </h2>
-                <div class="relative flex-1 mb-10 bg-white border-b-4 rounded-3xl">
+                <div class="relative flex-1 mb-10 bg-gray-100 shadow-lg rounded-3xl">
                   <div class="relative p-6 flex items-center">
                     <img
                       src={process1}
@@ -65,7 +65,7 @@ const Process = () => {
                 <h2 class="inline-block px-4 py-2 mb-4 text-xs font-medium text-gray-100 bg-gradient-to-r from-tertiary2 to-tertiary1 rounded-3xl">
                   Stage 2
                 </h2>
-                <div class="relative flex-1 mb-10 bg-white border-b-4 rounded-3xl">
+                <div class="relative flex-1 mb-10 bg-gray-100 shadow-lg rounded-3xl">
                   <div class="relative p-6 flex items-center">
                     <img
                       src={process2}
@@ -92,7 +92,7 @@ const Process = () => {
                 <h2 class="inline-block px-4 py-2 mb-4 text-xs font-medium text-gray-100 bg-gradient-to-r from-tertiary2 to-tertiary1 rounded-3xl">
                   Stage 3
                 </h2>
-                <div class="relative flex-1 mb-10 bg-white border-b-4 rounded-3xl">
+                <div class="relative flex-1 mb-10 bg-gray-100 shadow-lg rounded-3xl">
                   <div class="relative p-6 flex items-center">
                     <img
                       src={process3}
@@ -119,7 +119,7 @@ const Process = () => {
                 <h2 class="inline-block px-4 py-2 mb-4 text-xs font-medium text-gray-100 bg-gradient-to-r from-tertiary2 to-tertiary1 rounded-3xl">
                   Stage 4
                 </h2>
-                <div class="relative flex-1 mb-10 bg-white border-b-4 rounded-3xl">
+                <div class="relative flex-1 mb-10 bg-gray-100 shadow-lg rounded-3xl">
                   <div class="relative p-6 flex items-center">
                     <img
                       src={process4}
@@ -145,7 +145,7 @@ const Process = () => {
                 <h2 class="inline-block px-4 py-2 mb-4 text-xs font-medium text-gray-100 bg-gradient-to-r from-tertiary2 to-tertiary1 rounded-3xl">
                   Stage 5
                 </h2>
-                <div class="relative flex-1 mb-10 bg-white border-b-4 rounded-3xl">
+                <div class="relative flex-1 mb-10 bg-gray-100 shadow-lg rounded-3xl">
                   <div class="relative p-6 flex items-center">
                     <img
                       src={process5}
