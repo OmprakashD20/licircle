@@ -8,7 +8,7 @@ import {
 
 const Awards = () => {
   return (
-    <div className="pb-16 sm:pb-24">
+    <div className="pb-8">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <h2 className="text-center font-quando text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold leading-8 text-gray-900">
           Supported by

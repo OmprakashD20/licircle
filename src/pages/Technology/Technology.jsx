@@ -3,7 +3,11 @@ import Footer from "@/components/Footer/Footer";
 
 import { IoIosFastforward } from "react-icons/io";
 
-import { OurTechnology, WhyUs } from "@/constants/constants";
+import {
+  MechanicalProcessing,
+  Repurposing,
+  Recovery,
+} from "@/constants/constants";
 
 import {
   Card,
@@ -13,17 +17,16 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-import Cards from "./components/Cards";
+import Cards from "@/components/Shared/Cards";
 
 const Technology = () => {
   return (
     <>
       <NavBar />
       <Cards
-        features={OurTechnology}
-        isTech={true}
-        title={"Our"}
-        mainTitle={"Technology"}
+        features={MechanicalProcessing}
+        title={""}
+        mainTitle={"Mechanical Processing"}
       />
       <Card className="mx-6 sm:mx-32 max-sm:mb-8 my-4 bg-gray-200 border-0 shadow-lg">
         <CardHeader className="p-4 px-8">
@@ -39,8 +42,8 @@ const Technology = () => {
           </CardDescription>
         </CardContent>
       </Card>
-      <Cards features={WhyUs} title={"Why"} mainTitle={"LiCircle"} />
-      <Card className="mx-6 sm:mx-32 mb-16 bg-gray-200 border-0 shadow-lg">
+      <Cards features={Repurposing} title={""} mainTitle={"Repurposing"} />
+      <Card className="mx-6 sm:mx-32 max-sm:mb-8 my-4 bg-gray-200 border-0 shadow-lg">
         <CardHeader className="p-4 px-8">
           <CardTitle className="text-xl md:text-2xl font-quando text-primary flex">
             <IoIosFastforward size={24} className="text-primary mt-1" />
@@ -56,6 +59,7 @@ const Technology = () => {
           </CardDescription>
         </CardContent>
       </Card>
+      <Cards features={Recovery} title={""} mainTitle={"Recovery"} />
       <Footer />
     </>
   );
