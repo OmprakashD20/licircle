@@ -42,14 +42,14 @@ const Hero = () => {
                       <div className="h-44 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
                         <img
                           src={goal1}
-                          alt=""
+                          alt="goal"
                           className="h-full w-full object-cover object-center"
                         />
                       </div>
                       <div className="h-44 w-44 overflow-hidden rounded-lg">
                         <img
                           src={goal2}
-                          alt=""
+                          alt="goal"
                           className="h-full w-full object-cover object-center"
                         />
                       </div>
@@ -58,21 +58,21 @@ const Hero = () => {
                       <div className="h-44 w-44 overflow-hidden rounded-lg">
                         <img
                           src={goal3}
-                          alt=""
+                          alt="goal"
                           className="h-full w-full object-cover object-center"
                         />
                       </div>
                       <div className="h-44 w-44 overflow-hidden rounded-lg">
                         <img
                           src={goal4}
-                          alt=""
+                          alt="goal"
                           className="h-full w-full object-cover object-center"
                         />
                       </div>
                       <div className="max-sm:mt-4 h-44 w-44 overflow-hidden rounded-lg">
                         <img
                           src={goal5}
-                          alt=""
+                          alt="goal"
                           className="h-full w-full object-cover object-center"
                         />
                       </div>
@@ -81,14 +81,14 @@ const Hero = () => {
                       <div className="h-44 w-44 overflow-hidden rounded-lg">
                         <img
                           src={goal6}
-                          alt=""
+                          alt="goal"
                           className="h-full w-full object-cover object-center"
                         />
                       </div>
                       <div className="h-44 w-44 overflow-hidden rounded-lg">
                         <img
                           src={goal7}
-                          alt=""
+                          alt="goal"
                           className="h-full w-full object-cover object-center"
                         />
                       </div>
@@ -97,14 +97,14 @@ const Hero = () => {
                       <div className="h-64 w-44 overflow-hidden rounded-lg">
                         <img
                           src={goal8}
-                          alt=""
+                          alt="goal"
                           className="h-full w-full object-cover object-left"
                         />
                       </div>
                       <div className="h-64 w-44 overflow-hidden rounded-lg">
                         <img
                           src={goal9}
-                          alt=""
+                          alt="goal"
                           className="h-full w-full object-cover object-left"
                         />
                       </div>
