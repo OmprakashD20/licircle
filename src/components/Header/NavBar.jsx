@@ -116,38 +116,15 @@ const NavBar = () => {
               exit="initial"
               className="flex flex-col h-full justify-around items-center gap-4"
             >
-              <div className="flex flex-col items-center justify-center gap-4">
+              <div className="flex flex-col items-center justify-center gap-4 mb-20">
                 {navLinks.map((link, index) => {
                   return (
-                    <div className="overflow-hidden">
+                    <div className="overflow-hidden" key={index}>
                       <MobileNavLink key={index} link={link} />
                     </div>
                   );
                 })}
               </div>
-              <motion.div
-                variants={{
-                  initial: {
-                    opacity: 0,
-                  },
-                  open: {
-                    opacity: 1,
-                    transition: {
-                      delay: 0.5,
-                    },
-                  },
-                  exit: {
-                    opacity: 0,
-                  },
-                }}
-                initial="initial"
-                animate="open"
-                exit="exit"
-              >
-                <p className="text-black font-medium text-base underline underline-offset-2 hover:scale-105 transition-transform cursor-pointer font-oxygen">
-                  info@licircle.org.in
-                </p>
-              </motion.div>
             </motion.div>
           </AnimatePresence>
           <SheetFooter>
