@@ -50,7 +50,7 @@ const Contact = () => {
             </div>
 
             <div className="mb-8 flex w-full max-w-[370px]">
-              <div className="mr-6 flex h-[50px] xs:h-[60px] w-full max-w-[50px] xs:max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary/5 text-primary">
+              <div className="flex h-[50px] xs:h-[60px] w-full max-w-[50px] xs:max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary/5 text-primary">
                 <svg
                   width={iconSize}
                   height={iconSize}
