@@ -1,4 +1,4 @@
-import { FaLinkedin, FaFacebook, FaXTwitter } from "react-icons/fa6";
+import { FaLinkedin, FaYoutube, FaXTwitter } from "react-icons/fa6";
 import { useMediaQuery } from "react-responsive";
 import { IoMail, IoCall } from "react-icons/io5";
 
@@ -6,10 +6,14 @@ const Footer = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
   const socialIconSize = isMobile ? 18 : 22;
   const socialIcons = [
-    <a href="" target="_blank" aria-label="Find more about us on Facebook">
-      <FaFacebook
+    <a
+      href="https://youtube.com/@li-circle8690?si=7OgUDuDXcW3-y3xU"
+      target="_blank"
+      aria-label="Find more about us on Facebook"
+    >
+      <FaYoutube
         size={socialIconSize}
-        className="text-blue-600 sm:group-hover:scale-125 transition-all"
+        className="text-red-600 sm:group-hover:scale-125 transition-all"
       />
     </a>,
     <a href="" target="_blank" aria-label="Find more about us on Twitter">

@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Proces from "./pages/Process/Process";
 import Technology from "./pages/Technology/Technology";
+import Contact from "./pages/Contact/Contact";
 import Error from "./pages/Error/Error";
 
 const App = () => {
@@ -19,6 +20,8 @@ const App = () => {
         <Route path="/process" element={<Proces />} />
         {/* Technology Page */}
         <Route path="/technology" element={<Technology />} />
+        {/* Contact Page */}
+        <Route path="/contact" element={<Contact />} />
         {/* Error / Not Found Page */}
         <Route path="*" element={<Error />} />
       </Routes>
