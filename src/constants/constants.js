@@ -27,6 +27,12 @@ import process3 from "@/assets/Process/stage3.png";
 import process4 from "@/assets/Process/stage4.png";
 import process5 from "@/assets/Process/stage5.png";
 
+//Product Images
+import battery from "@/assets/Products/battery.png";
+import blackMass from "@/assets/Products/black-mass.png";
+import recovered1 from "@/assets/Products/recovered1.png";
+import recovered2 from "@/assets/Products/recovered2.png";
+
 //Nav Links
 export const navLinks = [
   {
@@ -105,6 +111,33 @@ export const Recovery = [
   },
 ];
 
+export const services = [
+  {
+    name: "EOL Solutions for EV Batteries",
+  },
+  {
+    name: "Supply Chain Partnership",
+  },
+  {
+    name: "Proprietary technology",
+  },
+  {
+    name: "Robust Product",
+  },
+  {
+    name: "Safe and reliable reverse logistics",
+  },
+  {
+    name: "Buyback pan India",
+  },
+  {
+    name: "100% Compliance support",
+  },
+  {
+    name: "Best in-class service",
+  },
+];
+
 //Why Us
 export const WhyUs = [
   {
@@ -151,4 +184,8 @@ export {
   process3,
   process4,
   process5,
+  battery,
+  blackMass,
+  recovered1,
+  recovered2,
 };

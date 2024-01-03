@@ -111,7 +111,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="w-full flex items-center justify-center border-t-[0.15px] border-gray-300">
-        <p className="my-2 text-xs font-oxygen text-gray-300">
+        <p className="my-2 text-xs font-oxygen text-gray-400">
           Copyright © 2023 LiCircle
         </p>
       </div>

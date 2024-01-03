@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oxygen:wght@300;400;700&family=Quando&family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap");
+
+$idm: #225926;
+$mms: #a02842;
+$bpo: #007680;
+$white: #fff;
+$black: #000;
+
+.flow-chart_input {
+  display: none;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+@keyframes scale {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  90% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes textOpacity {
+  0% {
+    visibility: none;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.flow-chart {
+  opacity: 0;
+  position: relative;
+  padding: 0;
+  transition: all 200ms ease;
+  animation: 750ms ease-out 300ms scale;
+  animation-fill-mode: forwards;
+}
+.flow-chart-svg {
+  animation: 1400ms ease-out 400ms spin;
+  animation-fill-mode: forwards;
+  image {
+    opacity: 0;
+    animation: 1400ms ease-out 2500ms textOpacity;
+    animation-fill-mode: forwards;
+  }
+  text {
+    font-family: "Oxygen", sans-serif;
+    font-size: 16px;
+    opacity: 0;
+    animation: 1400ms ease-out 2500ms textOpacity;
+    animation-fill-mode: forwards;
+    &.flow-chart-title {
+      opacity: 0;
+      font-family: "Quando", serif;
+      font-size: 27.8174px;
+      font-weight: 500;
+      fill: $idm;
+      animation: 1400ms ease-out 1900ms textOpacity;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+.flow-svg-outer-circle,
+.flow-svg-inner-circle {
+  fill: $white;
+}
+.flow-chart-group_shape {
+  fill: $idm;
+}
+.flow-chart-group {
+  &1_shape {
+    fill-opacity: 1;
+  }
+  &2_shape {
+    fill-opacity: 0.8;
+  }
+  &3_shape {
+    fill-opacity: 0.6;
+  }
+  &4_shape {
+    fill-opacity: 0.4;
+  }
+  &5_shape {
+    fill-opacity: 0.3;
+  }
+  &6_shape {
+    fill-opacity: 0.2;
+  }
+}
+.flow-chart-content {
+  display: none;
+}
+@media screen and (min-width: 550px) {
+  .flow-chart {
+    padding: 0 30%;
+  }
+  .flow-chart-content {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .flow-chart_description_group {
+    &1 {
+      order: 2;
+      width: 50%;
+      padding-left: 30%;
+      margin-top: 50px;
+
+      opacity: 0;
+      animation: 1400ms ease-out 2900ms textOpacity;
+      animation-fill-mode: forwards;
+      p {
+        border-bottom: 1px solid $black;
+        padding-bottom: 5px;
+      }
+    }
+    &2 {
+      order: 4;
+      width: 50%;
+      padding-left: 30%;
+      margin-top: -150px;
+      opacity: 0;
+      animation: 1400ms ease-out 2900ms textOpacity;
+      animation-fill-mode: forwards;
+      p {
+        border-bottom: 1px solid $black;
+        padding-bottom: 5px;
+      }
+    }
+    &3 {
+      order: 3;
+      width: 50%;
+      padding-right: 30%;
+      text-align: right;
+      margin-top: -150px;
+      opacity: 0;
+      animation: 1400ms ease-out 2900ms textOpacity;
+      animation-fill-mode: forwards;
+      p {
+        border-bottom: 1px solid $black;
+        padding-bottom: 5px;
+      }
+    }
+    &4 {
+      order: 1;
+      width: 50%;
+      padding-right: 30%;
+      text-align: right;
+      margin-top: 60px;
+      opacity: 0;
+      animation: 1400ms ease-out 2900ms textOpacity;
+      animation-fill-mode: forwards;
+      p {
+        border-bottom: 1px solid $black;
+        padding-bottom: 5px;
+      }
+    }
+  }
+}

@@ -9,7 +9,7 @@ const MobileNavLink = ({ link }) => {
   const isActive = currentPath === href;
   const textColor = isActive ? "text-primary font-medium" : "text-secondary2";
   const underline = isActive
-    ? "underline underline-offset-2 decoration-secondary2"
+    ? "underline underline-offset-2 decoration-primary"
     : "";
 
   const navLinkVariants = {

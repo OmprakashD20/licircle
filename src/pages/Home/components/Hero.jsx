@@ -28,7 +28,7 @@ const Hero = () => {
                 ></div>
               </span>
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-gray-500">
+            <p className="mt-4 text-base sm:text-lg text-gray-500 font-oxygen">
               Compliant with 9 of 17 Global Goals - Environmental, Social and
               Governance.
             </p>
