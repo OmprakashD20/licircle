@@ -1,67 +1,74 @@
-import { FaBatteryEmpty } from "react-icons/fa";
+import { missions } from "@/constants/constants";
 
 const Vision = () => {
-  const missions = [
-    {
-      description:
-        "Supporting lithium-ion battery-related OEMs to meet their statutory Extended Producer Responsibility.",
-      icon: FaBatteryEmpty,
-    },
-    {
-      description:
-        "Supporting lithium-ion battery-related OEMs to meet their statutory Extended Producer Responsibility.",
-      icon: FaBatteryEmpty,
-    },
-    {
-      description:
-        "Looping them to the circular economy by supplying the extracted precious metals back to cell manufacturing.",
-      icon: FaBatteryEmpty,
-    },
-  ];
   return (
-    <div className="relative overflow-hidden pb-16 sm:pb-24 px-4">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 items-center">
-          <div className="lg:pr-8 lg:pt-4">
-            <div className="lg:max-w-lg">
-              <h2 className="font-quando text-xl font-semibold text-primary">
-                GreenTechRevolution
-              </h2>
-              <p className="mt-6 text-3xl font-bold font-bebasNeue tracking-wider sm:text-4xl">
-                Vision
-              </p>
-              <p className="mt-3 text-base sm:text-lg text-gray-600 font-oxygen">
+    <div className="container w-full my-4 mb-8 pt-8 p-4 mx-auto">
+      <div className="relative mx-auto md:max-w-2xl pt-6 min-w-0 break-words bg-gray-100 border-2 border-green-500 w-full mb-12 hover:shadow-lg shadow-lg hover:scale-105 transition-all duration-300 hover:cursor-pointer rounded-xl">
+        <div className="text-center">
+          <h3 className="sm:text-4xl text-3xl font-quando font-bold leading-normal uppercase">
+            Our{" "}
+            <span className="relative whitespace-nowrap">
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 418 42"
+                className="absolute top-2/3 left-0 h-[0.58em] w-full fill-tertiary1"
+                preserveAspectRatio="none"
+              >
+                <path d="M203.371.916c-26.013-2.078-76.686 1.963-124.73 9.946L67.3 12.749C35.421 18.062 18.2 21.766 6.004 25.934 1.244 27.561.828 27.778.874 28.61c.07 1.214.828 1.121 9.595-1.176 9.072-2.377 17.15-3.92 39.246-7.496C123.565 7.986 157.869 4.492 195.942 5.046c7.461.108 19.25 1.696 19.17 2.582-.107 1.183-7.874 4.31-25.75 10.366-21.992 7.45-35.43 12.534-36.701 13.884-2.173 2.308-.202 4.407 4.442 4.734 2.654.187 3.263.157 15.593-.78 35.401-2.686 57.944-3.488 88.365-3.143 46.327.526 75.721 2.23 130.788 7.584 19.787 1.924 20.814 1.98 24.557 1.332l.066-.011c1.201-.203 1.53-1.825.399-2.335-2.911-1.31-4.893-1.604-22.048-3.261-57.509-5.556-87.871-7.36-132.059-7.842-23.239-.254-33.617-.116-50.627.674-11.629.54-42.371 2.494-46.696 2.967-2.359.259 8.133-3.625 26.504-9.81 23.239-7.825 27.934-10.149 28.304-14.005.417-4.348-3.529-6-16.878-7.066Z"></path>
+              </svg>
+              <span className="text-primary">Vision</span>
+            </span>
+          </h3>
+          <div className="mt-6 py-2 border-t border-slate-200 text-center">
+            <div className="flex flex-wrap justify-center">
+              <p className="leading-relaxed text-gray-600 font-oxygen py-2 px-4">
                 To strengthen the global Advanced Battery Storage raw material
                 supply chain by sustainable and eco-friendly urban mining,
                 enhancing the circular economy.
               </p>
-              <p className="mt-6 text-3xl font-bold font-bebasNeue tracking-wider sm:text-4xl">
-                Mission
-              </p>
-              <dl className="mt-4 max-w-xl space-y-4 text-base text-gray-600 lg:max-w-none">
-                {missions.map((mission, index) => (
-                  <div key={index} className="">
-                    <dt className="flex font-oxygen">
-                      <span className="flex items-center justify-center w-10 h-10">
-                        <mission.icon className="w-6 h-6 text-primary" />
-                      </span>
-                      <span className="ml-4 text-base sm:text-lg">
-                        {mission.description}
-                      </span>
-                    </dt>
-                  </div>
-                ))}
-              </dl>
             </div>
           </div>
-          <img
-            src="https://images.unsplash.com/photo-1521316730702-829a8e30dfd0?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Vision and Mission"
-            className="w-[48rem] h-[450px] object-cover max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
-            width={2432}
-            height={1442}
-          />
         </div>
+      </div>
+
+      <p className="text-center font-quando font-bold sm:text-4xl text-3xl mb-12 uppercase">
+        <span className="relative whitespace-nowrap">
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 418 42"
+            className="absolute top-2/3 left-0 h-[0.58em] w-full fill-tertiary1"
+            preserveAspectRatio="none"
+          >
+            <path d="M203.371.916c-26.013-2.078-76.686 1.963-124.73 9.946L67.3 12.749C35.421 18.062 18.2 21.766 6.004 25.934 1.244 27.561.828 27.778.874 28.61c.07 1.214.828 1.121 9.595-1.176 9.072-2.377 17.15-3.92 39.246-7.496C123.565 7.986 157.869 4.492 195.942 5.046c7.461.108 19.25 1.696 19.17 2.582-.107 1.183-7.874 4.31-25.75 10.366-21.992 7.45-35.43 12.534-36.701 13.884-2.173 2.308-.202 4.407 4.442 4.734 2.654.187 3.263.157 15.593-.78 35.401-2.686 57.944-3.488 88.365-3.143 46.327.526 75.721 2.23 130.788 7.584 19.787 1.924 20.814 1.98 24.557 1.332l.066-.011c1.201-.203 1.53-1.825.399-2.335-2.911-1.31-4.893-1.604-22.048-3.261-57.509-5.556-87.871-7.36-132.059-7.842-23.239-.254-33.617-.116-50.627.674-11.629.54-42.371 2.494-46.696 2.967-2.359.259 8.133-3.625 26.504-9.81 23.239-7.825 27.934-10.149 28.304-14.005.417-4.348-3.529-6-16.878-7.066Z"></path>
+          </svg>
+          <span className="text-primary">Mission</span>
+        </span>
+      </p>
+      <div className="grid gap-14 md:grid-cols-3 md:gap-5">
+        {missions.map((mission, index) => (
+          <div
+            key={index}
+            className={`${
+              index == 0
+                ? "border-blue-500"
+                : index == 1
+                ? "border-indigo-500"
+                : "border-purple-500"
+            } border-2 rounded-xl bg-gray-100 p-6 pb-0 text-center hover:shadow-lg shadow-lg hover:scale-105 transition-all duration-300 hover:cursor-pointer`}
+          >
+            <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-tertiary2 shadow-lg shadow-tertiary1/40">
+              <img
+                src={mission.icon}
+                alt={`Mission-${index + 1}`}
+                height={38}
+                width={38}
+              />
+            </div>
+            <p className="-translate-y-8 px-4 text-gray-600 font-oxygen flex justify-center items-center">
+              {mission.description}
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   );

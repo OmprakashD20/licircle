@@ -85,7 +85,7 @@ const NavBar = () => {
         type: "spring",
         duration: 0.5,
       }}
-      className={`z-10 h-14 md:h-10 ${
+      className={`z-30 h-14 md:h-10 ${
         isScrolled ? "rounded-b-[20px]" : ""
       } shadow-lg bg-background flex justify-between items-center px-4 xs:px-8 md:py-8 lg:px-20 w-full`}
     >

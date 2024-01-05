@@ -1,6 +1,5 @@
 import NavBar from "@/components/Header/NavBar";
 import Footer from "@/components/Footer/Footer";
-import AnimatedButton from "@/components/Shared/Button";
 
 const Error = () => {
   return (
