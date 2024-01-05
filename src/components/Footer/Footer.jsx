@@ -9,19 +9,19 @@ const Footer = () => {
     <a
       href="https://youtube.com/@li-circle8690?si=7OgUDuDXcW3-y3xU"
       target="_blank"
-      aria-label="Find more about us on Facebook"
+      aria-label="Find more about us on Youtube"
     >
       <FaYoutube
         size={socialIconSize}
         className="text-red-600 sm:group-hover:scale-125 transition-all"
       />
     </a>,
-    <a href="" target="_blank" aria-label="Find more about us on Twitter">
-      <FaXTwitter
-        size={socialIconSize}
-        className="sm:group-hover:scale-125 transition-all"
-      />
-    </a>,
+    // <a href="" target="_blank" aria-label="Find more about us on Twitter">
+    //   <FaXTwitter
+    //     size={socialIconSize}
+    //     className="sm:group-hover:scale-125 transition-all"
+    //   />
+    // </a>,
     <a
       href="https://www.linkedin.com/company/licircle/"
       target="_blank"
