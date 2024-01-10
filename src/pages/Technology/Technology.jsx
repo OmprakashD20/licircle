@@ -12,7 +12,7 @@ const Technology = () => {
   return (
     <>
       <NavBar />
-      <div className="container px-4 py-10 sm:max-w-xl mx-auto overflow:hidden">
+      <div className="container px-4 py-10 sm:max-w-xl mx-auto overflow-hidden">
         <SlideFromRight delay={0.4}>
           <p className="text-center font-bebasNeue font-bold xs:text-6xl min-[320px]:text-5xl text-4xl pb-6">
             Mechanical
