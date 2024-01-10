@@ -1,4 +1,8 @@
-import { SlideFromRight, SlideFromBottom } from "@/utils/Animation";
+import {
+  SlideFromRight,
+  SlideFromBottom,
+  RevealDelayed,
+} from "@/utils/Animation";
 
 import { WhyUs } from "@/constants/constants";
 
@@ -38,30 +42,34 @@ const WhyUsCard = () => {
                   : "border-purple-500"
               } rounded-md p-6 text-center bg-gray-100 hover:shadow-lg shadow-lg hover:scale-105 transition-all duration-500 hover:cursor-pointer h-full`}
             >
-              <div
-                className={`button-text mx-auto flex h-14 w-14 items-center justify-center rounded-md border-2 ${
-                  index == 0
-                    ? "border-green-500"
-                    : index == 1
-                    ? "border-blue-500"
-                    : index == 2
-                    ? "border-indigo-500"
-                    : "border-purple-500"
-                }`}
-              >
-                <img
-                  src={reason.icon}
-                  alt={reason.name}
-                  height={36}
-                  width={36}
-                />
-              </div>
-              <h3 className="mt-6 font-oxygen uppercase text-lg md:text-xl font-bold text-gray-800">
-                {reason.name}
-              </h3>
-              <p className="mt-4 mb-0 text-gray-600 font-oxygen">
-                {reason.description}
-              </p>
+              <RevealDelayed delay={0.5 * (index + 1)}>
+                <div
+                  className={`button-text mx-auto flex h-14 w-14 items-center justify-center rounded-md border-2 ${
+                    index == 0
+                      ? "border-green-500"
+                      : index == 1
+                      ? "border-blue-500"
+                      : index == 2
+                      ? "border-indigo-500"
+                      : "border-purple-500"
+                  }`}
+                >
+                  <img
+                    src={reason.icon}
+                    alt={reason.name}
+                    height={36}
+                    width={36}
+                  />
+                </div>
+              </RevealDelayed>
+              <SlideFromBottom delay={0.5 * (index + 1)}>
+                <h3 className="mt-6 font-oxygen uppercase text-lg md:text-xl font-bold text-gray-800">
+                  {reason.name}
+                </h3>
+                <p className="mt-4 mb-0 text-gray-600 font-oxygen">
+                  {reason.description}
+                </p>
+              </SlideFromBottom>
             </div>
           </SlideFromRight>
         ))}
