@@ -4,7 +4,7 @@ import { SlideFromLeft, StaggeredAnimation } from "@/utils/Animation";
 
 const RepurposingCard = () => {
   return (
-    <div className="container px-4 py-10 mx-auto">
+    <div className="container px-4 py-10 mx-auto overflow-hidden">
       <SlideFromLeft delay={0.7}>
         <p className="text-center font-bebasNeue font-bold xs:text-6xl min-[320px]:text-5xl text-4xl pb-6">
           <span className="relative whitespace-nowrap">
