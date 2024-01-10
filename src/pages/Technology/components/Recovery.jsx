@@ -4,7 +4,7 @@ import { SlideFromRight, StaggeredAnimation } from "@/utils/Animation";
 
 const RecoveryCard = () => {
   return (
-    <div className="container relative flex flex-col justify-between h-full px-4 py-10 mx-auto xl:px-0">
+    <div className="container relative flex flex-col justify-between h-full px-4 py-10 mx-auto xl:px-0 overflow-hidden">
       <SlideFromRight delay={0.4}>
         <p className="text-center font-bebasNeue font-bold xs:text-6xl min-[320px]:text-5xl text-4xl pb-6">
           <span className="relative whitespace-nowrap">
