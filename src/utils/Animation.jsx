@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 
-const Reveal = ({ children, delay = 0.3 }) => {
+const Reveal = ({ children, delay = 0.3, className }) => {
   const ref = useRef();
   const isInView = useInView(ref, { once: true });
 
@@ -16,6 +16,7 @@ const Reveal = ({ children, delay = 0.3 }) => {
   return (
     <motion.div
       ref={ref}
+      className={className}
       initial="hidden"
       animate={mainControls}
       variants={{
@@ -41,7 +42,6 @@ const RevealDelayed = ({
   initialScale = 0.5,
   className,
   onClick = () => {},
-  role = "default",
 }) => {
   const ref = useRef();
   const isInView = useInView(ref, { once: true });
@@ -56,7 +56,6 @@ const RevealDelayed = ({
 
   return (
     <motion.div
-      role={role}
       onClick={onClick}
       ref={ref}
       initial="hidden"
@@ -138,7 +137,7 @@ const SlideFromBottom = ({ children, delay = 0.3 }) => {
         visible: {
           opacity: 1,
           y: 0,
-          transition: { duration: 0.4, delay: 0.3 },
+          transition: { duration: 0.4, delay: delay },
         },
       }}
     >
@@ -181,7 +180,7 @@ const SlideFromRight = ({ children, delay = 0.3 }) => {
   );
 };
 
-const SlideFromTop = ({ children }) => {
+const SlideFromTop = ({ children, delay = 0.3 }) => {
   const ref = useRef();
   const isInView = useInView(ref, { once: true });
 
@@ -206,7 +205,7 @@ const SlideFromTop = ({ children }) => {
         visible: {
           opacity: 1,
           y: 0,
-          transition: { duration: 0.4, delay: 0.3 },
+          transition: { duration: 0.4, delay: delay },
         },
       }}
     >

@@ -1,12 +1,6 @@
 import { RevealDelayed, SlideFromTop } from "@/utils/Animation";
 
-import {
-  support1,
-  support2,
-  support3,
-  support4,
-  support5,
-} from "@/constants/constants";
+import { supportedBy } from "@/constants/constants";
 
 const Awards = () => {
   return (
@@ -28,51 +22,25 @@ const Awards = () => {
           </h2>
         </SlideFromTop>
         <div className="mx-auto mt-12 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-          <RevealDelayed delay={0.4 * 1}>
-            <img
-              className="col-span-2 max-h-16 w-full object-contain lg:col-span-1"
-              src={support1}
-              alt="Supporter 1"
-              width={158}
-              height={48}
-            />
-          </RevealDelayed>
-          <RevealDelayed delay={0.4 * 2}>
-            <img
-              className="col-span-2 max-h-16 w-full object-contain lg:col-span-1"
-              src={support2}
-              alt="Supporter 2"
-              width={158}
-              height={48}
-            />
-          </RevealDelayed>
-          <RevealDelayed delay={0.4 * 3}>
-            <img
-              className="col-span-2 max-h-16 w-full object-contain lg:col-span-1"
-              src={support3}
-              alt="Supporter 3"
-              width={158}
-              height={48}
-            />
-          </RevealDelayed>
-          <RevealDelayed delay={0.4 * 4}>
-            <img
-              className="col-span-2 max-h-16 w-full object-contain sm:col-start-2 lg:col-span-1"
-              src={support4}
-              alt="Supporter 4"
-              width={158}
-              height={48}
-            />
-          </RevealDelayed>
-          <RevealDelayed delay={0.4 * 5}>
-            <img
-              className="col-span-2 col-start-2 max-h-16 w-full object-contain sm:col-start-auto lg:col-span-1"
-              src={support5}
-              alt="Supporter 5"
-              width={158}
-              height={48}
-            />
-          </RevealDelayed>
+          {supportedBy.map((supporter, index) => (
+            <RevealDelayed
+              key={index}
+              delay={0.2 * (index + 1)}
+              className={`${
+                index === supportedBy.length - 1
+                  ? "col-span-4 sm:col-span-2"
+                  : "col-span-2"
+              } lg:col-span-1`}
+            >
+              <img
+                className="max-h-16 w-full object-contain"
+                src={supporter.image}
+                alt={`${supporter.name} + logo`}
+                width={158}
+                height={48}
+              />
+            </RevealDelayed>
+          ))}
         </div>
       </div>
     </div>

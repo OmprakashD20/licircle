@@ -6,10 +6,20 @@ import hero from "@/assets/Home/hero.jpg";
 
 //Support Images
 import support1 from "@/assets/Support/support1.png";
-import support2 from "@/assets/Support/support2.png";
-import support3 from "@/assets/Support/support3.png";
-import support4 from "@/assets/Support/support4.png";
+import support2 from "@/assets/Support/support2.jpg";
+import support3 from "@/assets/Support/support3.jpg";
+import support4 from "@/assets/Support/support4.jpg";
 import support5 from "@/assets/Support/support5.png";
+import support6 from "@/assets/Support/support6.jpg";
+import support7 from "@/assets/Support/support7.jpg";
+import support8 from "@/assets/Support/support8.jpg";
+import support9 from "@/assets/Support/support9.jpg";
+import support10 from "@/assets/Support/support10.png";
+import support11 from "@/assets/Support/support11.jpg";
+import support12 from "@/assets/Support/support12.png";
+import support13 from "@/assets/Support/support13.jpg";
+import support14 from "@/assets/Support/support14.png";
+import support15 from "@/assets/Support/support15.jpg";
 
 //Service Images
 import service1 from "@/assets/About/service1.svg";
@@ -58,6 +68,30 @@ import recovery3 from "@/assets/Technology/Recovery/recovery3.png";
 import recovery4 from "@/assets/Technology/Recovery/recovery4.png";
 import recovery5 from "@/assets/Technology/Recovery/recovery5.png";
 
+//Nav Links
+export const navLinks = [
+  {
+    name: "Home",
+    href: "/",
+  },
+  {
+    name: "Process",
+    href: "/process",
+  },
+  {
+    name: "Technology",
+    href: "/technology",
+  },
+  {
+    name: "About",
+    href: "/about",
+  },
+  {
+    name: "Contact",
+    href: "/contact",
+  },
+];
+
 //Products
 export const products = [
   {
@@ -97,27 +131,67 @@ export const missions = [
   },
 ];
 
-//Nav Links
-export const navLinks = [
+//Supported By
+export const supportedBy = [
   {
-    name: "Home",
-    href: "/",
+    name: "IIMB NSRCEL",
+    image: support1,
   },
   {
-    name: "Process",
-    href: "/process",
+    name: "NASSCOM",
+    image: support14,
   },
   {
-    name: "Technology",
-    href: "/technology",
+    name: "FIIRE GOA",
+    image: support2,
   },
   {
-    name: "About",
-    href: "/about",
+    name: "Manipal University",
+    image: support3,
   },
   {
-    name: "Contact",
-    href: "/contact",
+    name: "DST",
+    image: support15,
+  },
+  {
+    name: "HDFC Bank",
+    image: support4,
+  },
+  {
+    name: "CSIR NIIST",
+    image: support5,
+  },
+  {
+    name: "MAIT",
+    image: support13,
+  },
+  {
+    name: "UNDP",
+    image: support12,
+  },
+  {
+    name: "Campus Fund",
+    image: support11,
+  },
+  {
+    name: "Startup India",
+    image: support10,
+  },
+  {
+    name: "Startup Karnataka",
+    image: support9,
+  },
+  {
+    name: "MSME",
+    image: support8,
+  },
+  {
+    name: "KSPCB",
+    image: support7,
+  },
+  {
+    name: "CPCB",
+    image: support6,
   },
 ];
 
@@ -247,18 +321,9 @@ export {
   logo,
   logoAlt,
   hero,
-  support1,
-  support2,
-  support3,
-  support4,
-  support5,
   process1,
   process2,
   process3,
   process4,
   process5,
-  battery,
-  blackMass,
-  recovered1,
-  recovered2,
 };

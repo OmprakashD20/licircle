@@ -42,9 +42,8 @@ const Footer = () => {
             LiCircle
           </p>
           <p className="text-sm xs:text-base w-full md:w-[80%] font-oxygen xs:my-2">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500.
+            We collect lithium-ion waste irrespective of its geometry,
+            chemistry, and application.
           </p>
           <div className="flex items-center justify-between mt-2 xs:my-4">
             {socialIcons.map((icon, index) => (
