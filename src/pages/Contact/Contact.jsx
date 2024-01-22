@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
+import { useSearchParams } from "react-router-dom";
 
 import NavBar from "@/components/Header/NavBar";
 import Footer from "@/components/Footer/Footer";
@@ -6,8 +8,26 @@ import Footer from "@/components/Footer/Footer";
 import { Reveal, SlideFromBottom, SlideFromTop } from "@/utils/Animation";
 
 const Contact = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  useEffect(() => {
+    const isFormSubmitTrue = searchParams.get("formsubmit") === "true";
+    if (isFormSubmitTrue) {
+      searchParams.delete("formsubmit");
+      setSearchParams(searchParams);
+      toast({
+        title: "Success!!",
+        description: "Your form has been submitted successfully!!",
+      });
+    }
+  }, []);
+  const [currentUrl, setCurrentUrl] = useState("");
+  useEffect(() => {
+    const url = window.location.href.split("?")[0];
+    setCurrentUrl(url);
+  }, []);
   const isMobile = useMediaQuery({ query: "(max-width: 480px)" });
   const iconSize = isMobile ? 24 : 30;
+  const recipientEmail = "santosh@licircle.com";
   return (
     <>
       <NavBar />
@@ -31,7 +51,7 @@ const Contact = () => {
             </SlideFromTop>
             <SlideFromTop delay={0.5}>
               <h2 className="mb-3 text-[32px] font-bold font-bebasNeue tracking-wider sm:text-[40px] lg:text-[36px] xl:text-[40px]">
-                Get in touch with us
+                Get in touch - Careers
               </h2>
             </SlideFromTop>
             <SlideFromBottom delay={0.8}>
@@ -50,16 +70,17 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div className="w-full flex flex-col items-start justify-center">
-                  <h4 className="mb-1 text-base sm:text-lg md:text-2xl tracking-tight font-bold font-quando">
+                  <h4 className="mb-1 text-base sm:text-lg md:text-2xl tracking-wider font-bold font-bebasNeue">
                     Our Location
                   </h4>
-                  <p className="text-sm sm:text-base font-oxygen">
+                  <p className="text-sm sm:text-base font-oxygen tracking-normal">
                     Trishulavel Eshan Pvt. Ltd. (Li-Circle) Plot No. 112
-                    Mastenahalli Industrial Area KIADB,{" "}
-                    <span className="font-bebasNeue font-semibold underline underline-offset-1">
+                    Mastenahalli Industrial Area KIADB.
+                    <br />
+                    <span className="font-semibold underline underline-offset-1 font-bebasNeue">
                       Office:
                     </span>{" "}
-                    #18 1st main, 6th cross, Sudhamanagar, Bangalore-560027
+                    #18 1st main, 6th cross, Sudhamanagar, Bangalore - 560027
                     Karnataka, India.
                   </p>
                 </div>
@@ -85,10 +106,10 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div className="w-full flex flex-col items-start justify-center">
-                  <h4 className="mb-1 text-base sm:text-lg md:text-2xl tracking-tight font-bold font-quando">
+                  <h4 className="mb-1 text-base sm:text-lg md:text-2xl tracking-wider font-bold font-bebasNeue">
                     Phone Number
                   </h4>
-                  <p className="text-sm sm:text-base font-oxygen">
+                  <p className="text-sm sm:text-base tracking-normal font-oxygen">
                     <a href="tel:+91 97310 67677">+91 97310 67677</a>
                   </p>
                 </div>
@@ -111,10 +132,10 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div className="w-full flex flex-col items-start justify-center">
-                  <h4 className="mb-1 text-base sm:text-lg md:text-2xl tracking-tight font-bold font-quando">
+                  <h4 className="mb-1 text-base sm:text-lg md:text-2xl tracking-wider font-bold font-bebasNeue">
                     Email Address
                   </h4>
-                  <p className="text-sm sm:text-base font-oxygen">
+                  <p className="text-sm sm:text-base tracking-normal font-oxygen">
                     <a href="mailto:santosh@licircle.com">
                       santosh@licircle.com
                     </a>
@@ -141,10 +162,10 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div className="w-full flex flex-col items-start justify-center">
-                  <h4 className="mb-1 text-base sm:text-lg md:text-2xl tracking-tight font-bold font-quando">
+                  <h4 className="mb-1 text-base sm:text-lg md:text-2xl tracking-wider font-bold font-bebasNeue">
                     Linkedin
                   </h4>
-                  <p className="text-sm sm:text-base font-oxygen">
+                  <p className="text-sm sm:text-base tracking-normal font-oxygen">
                     <a href="https://www.linkedin.com/company/licircle/">
                       LiCircle
                     </a>
@@ -156,19 +177,36 @@ const Contact = () => {
         </div>
         <Reveal className={"w-full xs:px-4 lg:w-1/2 xl:w-5/12"} delay={0.6}>
           <div className="relative rounded-lg p-8 shadow-lg sm:p-12">
-            <form>
+            <form
+              action={`https://formsubmit.co/${recipientEmail}`}
+              method="POST"
+            >
+              {/* FormSubmit Input Tags */}
+              <input
+                type="hidden"
+                name="_next"
+                value={currentUrl + "?formsubmit=true"}
+              />
+              <input
+                type="hidden"
+                name="_subject"
+                value="LiCircle - Contact Form Response"
+              />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+              {/* End of FormSubmit Input Tags */}
               <ContactInputBox
                 type="text"
                 name="name"
                 placeholder="Your Name"
               />
               <ContactInputBox
-                type="text"
+                type="email"
                 name="email"
                 placeholder="Your Email"
               />
               <ContactInputBox
-                type="text"
+                type="number"
                 name="phone"
                 placeholder="Your Phone"
               />

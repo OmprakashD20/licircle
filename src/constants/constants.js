@@ -22,10 +22,6 @@ import support14 from "@/assets/Support/support14.png";
 import support15 from "@/assets/Support/support15.jpg";
 
 //Service Images
-import service1 from "@/assets/About/service1.svg";
-import service2 from "@/assets/About/service2.svg";
-import service3 from "@/assets/About/service3.svg";
-import service4 from "@/assets/About/service4.svg";
 import service5 from "@/assets/About/service5.svg";
 import service6 from "@/assets/About/service6.svg";
 import service8 from "@/assets/About/service8.svg";
@@ -67,6 +63,9 @@ import recovery2 from "@/assets/Technology/Recovery/recovery2.png";
 import recovery3 from "@/assets/Technology/Recovery/recovery3.png";
 import recovery4 from "@/assets/Technology/Recovery/recovery4.png";
 import recovery5 from "@/assets/Technology/Recovery/recovery5.png";
+
+//Process
+import process from "@/assets/Process/process.jpg";
 
 //Nav Links
 export const navLinks = [
@@ -248,29 +247,14 @@ export const Recovery = [
     image: recovery4,
   },
   {
-    name: "Economical",
+    name: "Economically viable",
     description: "loreum ipsum dolor sit amet loreum ipsum dolor sit amet",
     image: recovery2,
   },
 ];
 
+//Services
 export const services = [
-  {
-    name: "EOL Solutions for EV Batteries",
-    icon: service1,
-  },
-  {
-    name: "Supply Chain Partnership",
-    icon: service2,
-  },
-  {
-    name: "Proprietary technology",
-    icon: service3,
-  },
-  {
-    name: "Robust Product",
-    icon: service4,
-  },
   {
     name: "Safe and reliable reverse logistics",
     icon: service5,
@@ -288,6 +272,9 @@ export const services = [
     icon: service8,
   },
 ];
+
+//About Us
+export const aboutUs = `Li-Circle was born in 2020 with a dearth of bridging the gap of supply chain incapabilities to operate with end-of-life lithium-ion batteries. since then we have proactively built a strong supply chain with a robust reverse logistics mechanism in Pan India along with our process efficient process to refurbish, recycle, and refine. Our efforts have been and shall be in building sustainable value additions to the Lithium ecosystem and not just a particular sector of any.\nOur current and growing strong overseas relationship has also been an image of our core Business Ethical Practices.\nBeing the first Lithium-ion battery recycler in the state as quoted by the KSPCB having 1000MTPA operational Capacity from 2023. Expanding to 4000MTPA in thDe coming financial year. Also by the volumes we operate in the particular sector, we are identified as a significant player in the market and we also strive to be the Key Stakeholder of the sector in the geography we operate.\nWe envision ourselves operating 2,70,000 MTPA by 2035 with Safe and reliable reverse logistics across the globe with a holistic recycling unit of advanced battery storage materials.`;
 
 //Why Us
 export const WhyUs = [
@@ -321,6 +308,7 @@ export {
   logo,
   logoAlt,
   hero,
+  process,
   process1,
   process2,
   process3,

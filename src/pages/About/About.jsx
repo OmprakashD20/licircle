@@ -3,7 +3,7 @@ import { IoIosBatteryFull } from "react-icons/io";
 import NavBar from "@/components/Header/NavBar";
 import Footer from "@/components/Footer/Footer";
 
-import { services } from "@/constants/constants";
+import { services, aboutUs } from "@/constants/constants";
 import { Card, CardContent, CardDescription } from "@/components/ui/card";
 
 import { SlideFromBottom, StaggeredAnimation, Reveal } from "@/utils/Animation";
@@ -32,15 +32,8 @@ const About = () => {
               </p>
             </SlideFromBottom>
             <Reveal delay={0.6}>
-              <p className="sm:mt-16 mt-10 text-base sm:text-lg sm:leading-8 font-oxygen text-gray-600 sm:text-justify">
-                We provide information on regulations and guidelines to help you
-                stay compliant and avoid environmental penalties. We adhere to
-                the highest industry standards, Find out about our certification
-                and compliance with environmental regulations. We collect
-                lithium-ion waste irrespective of its geometry, chemistry, and
-                application. Understand the legal requirements for battery
-                disposal. We provide information on regulations and guidelines
-                to help you stay compliant and avoid environmental penalties.
+              <p className="sm:mt-16 mt-10 text-base sm:text-lg sm:leading-8 font-oxygen text-gray-600 sm:text-justify whitespace-pre-line">
+                {aboutUs}
               </p>
             </Reveal>
           </div>
