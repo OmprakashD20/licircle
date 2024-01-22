@@ -134,7 +134,7 @@ const Hero = () => {
           >
             <Link
               to="/technology"
-              className="inline-block w-full text-center text-lg font-medium text-gray-100 bg-green-600 py-4 px-10 hover:bg-green-700 hover:shadow-lg hover:scale-105 transition-all duration-300 md:w-48 rounded-2xl font-oxygen"
+              className="inline-block w-full text-center text-lg font-medium text-gray-100 bg-green-600 py-4 px-10 hover:bg-green-700 hover:shadow-lg hover:scale-105 transition-all duration-300 md:w-48 rounded-lg font-oxygen"
             >
               Read More
             </Link>
