@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import NavBar from "@/components/Header/NavBar";
 import Footer from "@/components/Footer/Footer";
 
@@ -8,10 +10,25 @@ import { products, process } from "@/constants/constants";
 import { SlideFromTop, RevealDelayed } from "@/utils/Animation";
 
 const Proces = () => {
+  const imgVariant = {
+    initial: {
+      opacity: 0,
+      scale: 0.4,
+    },
+    animate: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeInOut",
+        delay: 0.3,
+      },
+    },
+  };
   return (
     <>
       <NavBar />
-      <SlideFromTop delay={0.4}>
+      <SlideFromTop delay={0}>
         <p className="pt-6 sm:pt-8 md:pt-10 text-center font-bebasNeue font-bold xs:text-6xl min-[320px]:text-5xl text-4xl">
           Our{" "}
           <span className="relative whitespace-nowrap">
@@ -28,7 +45,10 @@ const Proces = () => {
         </p>
       </SlideFromTop>
       <div className="w-full flex justify-center my-3 mt-6">
-        <img
+        <motion.img
+          variants={imgVariant}
+          initial={"initial"}
+          animate={"animate"}
           src={process}
           alt="process_img"
           className="rounded-lg border-2 border-green-500/50"
