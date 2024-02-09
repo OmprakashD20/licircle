@@ -65,7 +65,7 @@ const About = () => {
             <div className="grid gap-6 mb-8 sm:grid-cols-2 xl:grid-cols-4">
               {services.map((service, index) => (
                 <StaggeredAnimation key={index} delay={0.4} index={index}>
-                  <div className="flex items-center p-4 bg-gray-100 hover:shadow-lg shadow-lg hover:scale-105 transition-all duration-300 hover:cursor-pointer rounded-xl">
+                  <div className="flex items-center p-4 bg-gray-100 hover:shadow-lg shadow-lg hover:scale-105 transition-all duration-300 hover:cursor-pointer rounded-xl border-2 border-green-500/60">
                     <div
                       className={`p-2 mr-4 ${
                         index % 4 === 0

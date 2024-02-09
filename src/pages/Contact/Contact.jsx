@@ -176,7 +176,7 @@ const Contact = () => {
           </div>
         </div>
         <Reveal className={"w-full xs:px-4 lg:w-1/2 xl:w-5/12"} delay={0.6}>
-          <div className="relative rounded-lg p-8 shadow-lg sm:p-12">
+          <div className="relative rounded-lg p-8 shadow-lg sm:p-12 border-2 border-green-500/60">
             <form
               action={`https://formsubmit.co/${recipientEmail}`}
               method="POST"
